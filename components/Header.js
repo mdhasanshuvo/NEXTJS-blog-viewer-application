@@ -8,7 +8,7 @@ export default async function Header() {
 
 
     return (
-        <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <header className="bg-white shadow-md w-full ">
             <nav className="container mx-auto flex justify-between items-center px-6 py-4">
                 {/* Logo */}
                 <div className="text-2xl font-bold text-gray-800">
@@ -22,22 +22,13 @@ export default async function Header() {
                     <Link href="/" className="text-gray-600 hover:text-blue-500 transition">
                         Home
                     </Link>
-                    {user ? (
-                        <Link
-                            href="/profile"
-                            className="text-gray-600 hover:text-blue-500 transition"
-                        >
-                            Profile
-                        </Link>
-                    ) :
-                        (
-                            <Link
-                                href="/api/auth/login"
-                                className="text-gray-600 hover:text-blue-500 transition"
-                            >
-                                Profile
-                            </Link>
-                        )}
+
+                    <Link
+                        href="/profile"
+                        className="text-gray-600 hover:text-blue-500 transition"
+                    >
+                        Profile
+                    </Link>
                     {user ? (
                         <Link
                             href="/api/auth/logout"
